@@ -1,0 +1,67 @@
+.card {
+  @include media-breakpoint-up(md) {
+    border-radius: $cor-border-radius-md;
+  }
+
+  .card-img-overlay-bottom {
+    @extend .card-img-overlay;
+    top: unset;
+    bottom: 0;
+  }
+
+  .card-img-overlay-center {
+    @extend .card-img-overlay;
+    top:    50%;
+    left:   50%;
+    transform: translate(-50%, -50%);
+    height: min-content;
+  }
+
+  &-hover {
+    position: relative;
+    overflow: clip;
+
+    &:hover {
+      .card-img-overlay-bottom,
+      .card-img-overlay-center {
+        opacity: 1;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    .card-img-overlay-bottom,
+    .card-img-overlay-center {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &::after {
+      content:  "";
+      position: absolute;
+      top:      0;
+      right:    0;
+      bottom:   0;
+      left:     0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index:  0;
+      /* Asegúrate de que esté entre el video y el contenido */
+      height:   100%;
+      opacity:  0;
+      transition: opacity 0.3s ease;
+    }
+
+    * {
+      z-index: 1;
+    }
+  }
+}
+
+
+.card-body {
+  @include media-breakpoint-up(md) {
+    padding: $card-spacer-y-md;
+  }
+}

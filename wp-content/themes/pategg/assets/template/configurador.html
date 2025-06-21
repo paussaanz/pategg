@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../dist/css/all.css">
+</head>
+<body>
+
+<section class="section-configurador">
+    <div class="container-fluid py-5">
+        <div class="row py-5">
+            <div class="col-12 col-md-10 offset-md-1">
+                <div class="row">
+                    <div class="col-12 col-md-5 d-flex flex-column justify-content-between">
+                        <div class="">
+                            <h3 class="h3">A tu manera</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad aliquid
+                                blanditiis delectus distinctio explicabo, illo minima nobis numquam omnis porro quaerat
+                                quas soluta! Beatae culpa nisi officiis similique voluptatibus.</p>
+                        </div>
+                        <div class="col-12 col-md-5 offset-md-2 d-md-none">
+                            <img class="aspect-configurador rounded w-100"
+                                 src="https://www.pategg.com/wp-content/uploads/home2_.jpg" alt="Imagen configurador"/>
+                        </div>
+                        <div class="accordion" id="accordion-faqs">
+                            <div class="accordion-item border-bottom">
+                                <h2 class="accordion-header h5">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapse<?=$contador?>" aria-expanded="true"
+                                            aria-controls="collapse<?=$contador?>">
+                                        Configurador A
+                                    </button>
+                                </h2>
+                                <div id="collapse<?=$contador?>" class="accordion-collapse collapse"
+                                     data-bs-parent="#accordion-faqs">
+                                    <div class="accordion-body">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet quam
+                                            eget sem tristique imperdiet. Nulla mattis purus a mauris suscipit
+                                            dignissim.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 offset-md-2 d-none d-md-block">
+                        <img class="aspect-configurador rounded w-100"
+                             src="https://www.pategg.com/wp-content/uploads/home2_.jpg" alt="Imagen configurador"/>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
